@@ -1,0 +1,22 @@
+body {
+    background-color: powderblue;
+}
+h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+}
+p {
+    color: red;
+    border: 2px solid powderblue;
+}
+.gary p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.gary h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+.emoji p {
+    text-align:center;
+}
