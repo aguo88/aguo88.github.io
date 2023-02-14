@@ -1,22 +1,143 @@
-body {
-    background-color: powderblue;
-}
-h1 {
-    color: blue;
-    font-family: verdana;
-    font-size: 300%;
-}
-p {
-    color: red;
-    border: 2px solid powderblue;
-}
-.gary p {
-    font-family: 'Courier New', Courier, monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.gary h1 {
-    font-family: 'Courier New', Courier, monospace;
+body {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    background: #131313;
+    mix-blend-mode: normal;
 }
-.emoji p {
-    text-align:center;
+
+.container {
+    /* Frame 1 */
+    /* position: relative; */
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40;
+    /* height: 3568px; */
+}
+
+h1 {
+    /* H1 */
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 59px;
+    /* identical to box height, or 98% */
+    color: #FFFFFF;
+}
+
+.light h1 {
+    color: #FFFFFF;
+}
+
+.dark h1 {
+    color: #FFFFFF;
+}
+
+h2 {
+    /* H2 */
+
+    font-size: 25px;
+    line-height: 60px;
+    /* identical to box height, or 234% */
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+}
+
+.light h2 {
+    color: #FFFFFF;
+}
+
+.dark h2 {
+    color: #FFFFFF;
+}
+
+h3 {
+    /* H3 */
+
+    font-size: 30px;
+    line-height: 60px;
+    /* identical to box height, or 195% */
+    color: #FFFFFF;
+}
+
+.light h3 {
+    color: #FFFFFF;
+}
+
+.dark h3 {
+    color: #FFFFFF;
+}
+
+p {
+    /* p */
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height, or 125% */
+    color: #FFFFFF;
+}
+
+.light p {
+    color: #FFFFFF;
+}
+
+.dark p {
+    color: #FFFFFF;
+}
+
+button {
+    background: #1461F0;
+    border-radius: 40px;
+    /* BT */
+
+    font-size: 22px;
+    line-height: 60px;
+    /* identical to box height, or 266% */
+    text-align: center;
+    color: #E8E8E8;
+}
+
+/* Add a black background color to the top navigation */
+.navbar {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    /*fixed*/
+    background-color: #D9D9D9;
+}
+
+.navbarmenu {
+    display: flex;
+    list-style-type: none;
+    float: right;
+}
+
+.navbaritem {
+    display: inline;
+    justify-content: center;
+    align-content: center;
+}
+
+.navbarname {
+    color: #131313;
+    font-size: 22px;
+    line-height: 60px;
+    float: left;
+    justify-content: center;
+    align-content: center;
+}
+
+.links {
+    display: block;
+    padding-left: 50px;
+    text-decoration: none;
+    color: #131313;
+
+    font-size: 22px;
+    line-height: 60px;
 }
