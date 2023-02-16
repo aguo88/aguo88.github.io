@@ -1,3 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
+
+
+:root {
+    --line_height: 60px;
+    --white: #E8E8E8;
+    --black: #131313;
+    --blue: #1461F0;
+    --grey: #2B2B2B;
+    --fillet: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +17,10 @@
 }
 
 body {
-    font-family: 'Helvetica';
+    font-family: 'Ek Mukta'; /* Helvetica */
     font-style: normal;
     font-weight: 400;
-    background: #131313;
+    background: var(--black);
     mix-blend-mode: normal;
 }
 
@@ -18,14 +30,13 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 40;
-    /* height: 3568px; */
 }
 
 h1 {
     /* H1 */
     font-weight: 700;
     font-size: 60px;
-    line-height: 59px;
+    line-height: 60px;
     /* identical to box height, or 98% */
     color: #FFFFFF;
 }
@@ -60,7 +71,7 @@ h3 {
     /* H3 */
 
     font-size: 30px;
-    line-height: 60px;
+    line-height: 30px;
     /* identical to box height, or 195% */
     color: #FFFFFF;
 }
@@ -90,7 +101,7 @@ p {
     color: #FFFFFF;
 }
 
-button {
+.button {
     background: #1461F0;
     border-radius: 40px;
     /* BT */
@@ -106,8 +117,7 @@ button {
 .navbar {
     height: 60px;
     width: 100%;
-    position: absolute;
-    /*fixed*/
+    position: fixed;
     background-color: #D9D9D9;
 }
 
@@ -140,4 +150,36 @@ button {
 
     font-size: 22px;
     line-height: 60px;
+}
+
+.aboutMe {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.headshotBackground {
+    display: flex;
+    height: 500px;
+    width: 60%;
+    min-width: 500px;
+    margin-top: 30px;
+    position: relative;
+    /* background-color: var(--black); */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: var(--fillet);
+    align-items: center;
+    justify-content: center;
+}
+
+.headshotImage {
+    border-radius: 50%;
+    z-index: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 10px solid var(--white);
+    box-shadow: 50px 0px var(--grey);
 }
