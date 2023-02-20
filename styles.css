@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
 
+html {
+    scroll-behavior: smooth
+}
 
 :root {
     --line_height: 60px;
@@ -95,6 +98,32 @@ button {
     text-align: center;
     color: #E8E8E8;
     border: none;
+    cursor: pointer;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '\21D3'; /* \00bb */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .contactMeButton {
@@ -259,6 +288,7 @@ button {
     flex-direction: column;
     max-width: 533px;
 }
+
 .sideProjectOverviewR {
     text-align: right;
     position: relative;
