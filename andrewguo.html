@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
         <img src="Images/SideArrow.png">
         <h3 style="display: inline-block;">About Me</h3>
       </div>
-      <h1>Hi👋! My name is Andrew Guo and I’m a Mechatronics Engineer.</h1>
+      <h1 class="hiddenL">Hi👋! My name is Andrew Guo and I’m a Mechatronics Engineer.</h1>
     </div>
 
     <!-- Headshot -->
@@ -45,7 +46,7 @@
     </div>
 
     <!-- About Me Blurb -->
-    <p class="aboutMeBlurb">
+    <p class="aboutMeBlurb hiddenL">
       I’m a candidate of Honors Mechatronics Engineering at the University of Waterloo. I am really interested in
       mechanical design, robotics and anything Mechatronics related! I enjoy playing sports such as hockey/working out.
       I also received my CSWP for mechanical design. Currently looking for Fall 2023 internships.
@@ -54,7 +55,7 @@
     <div style="display: flex; justify-content: center;">
       <!-- Contact Me Button -->
       <button class="contactMeButton">
-        <span>
+        <span id="contactMeSpan">
           Contact Me
         </span>
       </button>
@@ -78,21 +79,23 @@
       <!-- SP1: Diff Swerve -->
       <div class="sideProjectContent">
         <img src="Images/DiffSwerve.jpg" class="diffSwerveImage">
-        <div class="sideProjectTextL">
+        <div class="sideProjectTextL hiddenL">
           <h2 class="sideProjectTitleL">
             <div class="dark">
               Differential Swerve Drive
             </div>
           </h2>
           <h4 class="sideProjectSubtitleL">
-            Project Magnemite
+            <div class="dark">
+              Project Magnemite
+            </div>
           </h4>
           <p class="sideProjectOverviewL">
             4 weeks, 4 mechatronics engineering students and 1 combined passion for building robots. Click below to
             see what we made.
           </p>
-          <button class="learnMoreButton">
-            <span>
+          <button class="learnMoreButton" id="learnMore1" onclick="handleButtonClick(id)">
+            <span id="1">
               Learn More
             </span>
           </button>
@@ -106,7 +109,7 @@
       <!-- SP2: FRC 610 -->
       <div class="sideProjectContent">
         <img src="Images/FullRobotV2 (Feb 26) 1.jpg" class="frc610Image">
-        <div class="sideProjectTextR">
+        <div class="sideProjectTextR  hiddenR">
           <h2 class="sideProjectTitleR">
             <div class="light">
               Team 610: FRC Team
@@ -121,7 +124,7 @@
             4 weeks, 4 mechatronics engineering students and 1 combined passion for building robots. Click below to
             see what we made.
           </p>
-          <button class="learnMoreButton">
+          <button class="learnMoreButton"  id="learnMore2" onclick="handleButtonClick(id)">
             <span>
               Learn More
             </span>
@@ -136,7 +139,7 @@
       <!-- SP3: 3D Driving Simulator -->
       <div class="sideProjectContent">
         <img src="Images/DriveSimulator.svg" class="driveSimImage">
-        <div class="sideProjectTextL">
+        <div class="sideProjectTextL hiddenL">
           <h2 class="sideProjectTitleL">
             <div class="dark">
               3D Driving Simulator
@@ -151,7 +154,7 @@
             4 weeks, 4 mechatronics engineering students and 1 combined passion for building robots. Click below to
             see what we made.
           </p>
-          <button class="learnMoreButton">
+          <button class="learnMoreButton" id="learnMore3" onclick="handleButtonClick(id)">
             <span>
               Learn More
             </span>
@@ -160,7 +163,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
