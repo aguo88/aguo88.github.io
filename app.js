@@ -41,7 +41,7 @@ function getStringById(id) {
 }
 
 function hideTextButton(id) {
-    document.getElementById(id).innerHTML = "<span>Hide</span>";
+    document.getElementById(id).innerHTML = "<span2> Hide </span2>";
 }
 
 function showTextButton(id) {

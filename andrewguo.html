@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -55,8 +56,8 @@
 
     <div style="display: flex; justify-content: center;">
       <!-- Contact Me Button -->
-      <button class="contactMeButton">
-        <span id="contactMeSpan">
+      <button class="contactMeButton" onclick="window.location.href ='andrewguo.html#contactMe';">
+        <span>
           Contact Me
         </span>
       </button>
@@ -96,7 +97,7 @@
             see what we made.
           </p>
           <button class="learnMoreButton" id="learnMore1" onclick="handleButtonClick(id)">
-            <span id="1">
+            <span>
               Learn More
             </span>
           </button>
@@ -125,7 +126,7 @@
             4 weeks, 4 mechatronics engineering students and 1 combined passion for building robots. Click below to
             see what we made.
           </p>
-          <button class="learnMoreButton"  id="learnMore2" onclick="handleButtonClick(id)">
+          <button class="learnMoreButton" id="learnMore2" onclick="handleButtonClick(id)">
             <span>
               Learn More
             </span>
@@ -162,6 +163,29 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <a id="contactMe"></a>
+  <div class="contactMe contactMeContent">
+    <div class="container" style="display: grid; align-content: center; justify-content: center">
+      <div style="justify-self: center;">
+        <img src="Images/SideArrow.png">
+        <div style="display: inline-block;">
+          <h3 class="light">Contact Me</h3>
+        </div>
+      </div>
+      <div>
+        <p style="display: inline-block;">
+          The best way to contact me is by email:
+        </p>
+        <a href="mailto: 10andrewguo@gmail.com" class="email">10andrewguo@gmail.com</a>
+      </div>
+      <p style="justify-self: center;">
+        Thanks for visiting my website🙏!
+      </p>
+      <div style="font-size:45px; justify-self: center;"><a href="https://www.linkedin.com/in/andrew-guo-3a1235219/" target="_blank"><i
+            class="fa fa-linkedin-square button2"></i></a></div>
     </div>
   </div>
 </body>
