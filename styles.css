@@ -368,16 +368,6 @@ button:hover span2:after {
     transition: all 1s;
 }
 
-@media(prefers-reduced-motion) {
-    .hiddenL {
-        transition: none;
-    }
-
-    .hiddenR {
-        transition: none;
-    }
-}
-
 .show {
     opacity: 1;
     filter: blur(0);
@@ -388,7 +378,8 @@ button:hover span2:after {
     padding-top: 30px;
     color: var(--black);
     width: 100%;
-    height: 300px;
+    max-height: 300px;
+    min-height: 280px;
     background-color: var(--black);
 }
 
@@ -409,20 +400,60 @@ button:hover span2:after {
     color: var(--blue);
 }
 
-.contactMeContent {
-    animation: slide-up 2s;
+.contactMeHide {
+    filter: blur(1);
+    opacity: 0.1;
+    transition: all 1s;
+    transform: scale(0);
 }
 
-@keyframes slide-up {
-    from {
-        filter: blur(1);
-        opacity: 0.2;
-        line-height: 200px;
+.contactMeShow {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hiddenHeaders {
+    filter: blur(1);
+    opacity: 0.1;
+    transition: all 1s;
+    transform: rotate(90deg);
+}
+
+.showHeader {
+    filter: blur(0);
+    opacity: 1;
+    transform: rotate(0);
+}
+
+.hiddenHeaderText {
+    filter: blur(1);
+    opacity: 0.1;
+    transition: all 1s;
+    transform: rotate(90deg);
+}
+
+.showHeaderText {
+    transition-delay: 1s;
+    filter: blur(0);
+    opacity: 1;
+    transform: rotate(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hiddenL {
+        transition: none;
     }
 
-    to {
-        filter: blur(0);
-        opacity: 1;
-        line-height: 60px;
+    .hiddenR {
+        transition: none;
+    }
+
+    .contactMeHide {
+        transition: none;
+    }
+
+    .hiddenHeader {
+        transition: none;
     }
 }
