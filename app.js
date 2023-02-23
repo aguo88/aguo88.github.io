@@ -1,51 +1,75 @@
-var learnMore1 = false;
-var learnMore2 = false;
-var learnMore3 = false;
+var r = document.querySelector(':root');
 
-function handleButtonClick(id) {
-    switch (id) {
-        case "learnMore1":
-            learnMore1 = !learnMore1;
-            if (learnMore1)
-                hideTextButton(id);
+var websiteData = {
+    "SP1" : {
+        "learnMore": false,
+        "hiddenHeight": 600,
+        "showHeight": 1000,
+        "buttonString": "Learn More"
+    },
+    "SP2" : {
+        "learnMore": false,
+        "hiddenHeight": 500,
+        "showHeight": 1000,
+        "buttonString": "Learn More"
+    },
+    "SP3" : {
+        "learnMore": false,
+        "hiddenHeight": 500,
+        "showHeight": 1000,
+        "buttonString": "Learn More"
+    },
+}
+
+var buttonToID = {
+    "SP1Button" : "SP1",
+    "SP2Button" : "SP2",
+    "SP3Button" : "SP3"
+}
+
+function handleButtonClick(buttonID) {
+    switch (buttonID) {
+        case "SP1Button":
+        case "SP2Button":
+        case "SP3Button":
+            var id = buttonToID[buttonID];
+            websiteData[id]["learnMore"] = !websiteData[id]["learnMore"];
+            if (websiteData[id]["learnMore"])
+                showContent(id);
             else
-                showTextButton(id);
-            break;
-        case "learnMore2":
-            learnMore2 = !learnMore2;
-            if (learnMore2)
-                hideTextButton(id);
-            else
-                showTextButton(id);
-            break;
-        case "learnMore3":
-            learnMore3 = !learnMore3;
-            if (learnMore3)
-                hideTextButton(id);
-            else
-                showTextButton(id);
+                hideContent(id);
             break;
     }
 }
 
 function getStringById(id) {
-    switch (id) {
-        case "learnMore1":
-            return "Learn More";
-        case "learnMore2":
-            return "Learn More";
-        case "learnMore3":
-            return "Learn More";
+    return websiteData[id]["buttonString"];
+}
+
+function showContent(id) {
+    // Switch to *Hide* button
+    document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span2> Hide </span2>";
+    r.style.setProperty("--extendHeight", websiteData[id]["showHeight"]+"px");
+    if(document.getElementById(id).classList.contains("stow")) {
+        document.getElementById(id).classList.remove("stow");
+    }
+    if(!document.getElementById(id).classList.contains("extend")) {
+        document.getElementById(id).classList.add("extend");
     }
 }
 
-function hideTextButton(id) {
-    document.getElementById(id).innerHTML = "<span2> Hide </span2>";
+function hideContent(id) {
+    //Switch to *Show* button
+    document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span>" + getStringById(id) + "</span>";
+    r.style.setProperty("--stowHeight", websiteData[id]["hiddenHeight"]+"px");
+    if(document.getElementById(id).classList.contains("extend")) {
+        document.getElementById(id).classList.remove("extend");
+    }
+    if(!document.getElementById(id).classList.contains("stow")) {
+        document.getElementById(id).classList.add("stow");
+    }
 }
 
-function showTextButton(id) {
-    document.getElementById(id).innerHTML = "<span>" + getStringById(id) + "</span>";
-}
 
 const observerL = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
