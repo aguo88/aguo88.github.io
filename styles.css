@@ -258,6 +258,7 @@ button:hover span2:after {
     width: 100%;
     min-height: 600px;
     background-color: var(--white);
+    transition: all 1s;
 }
 
 .sp_light_container {
@@ -266,6 +267,7 @@ button:hover span2:after {
     width: 100%;
     min-height: 500px;
     background-color: var(--white);
+    transition: all 1s;
 }
 
 .sp_dark_container {
@@ -274,6 +276,7 @@ button:hover span2:after {
     width: 100%;
     min-height: 500px;
     background-color: var(--black);
+    transition: all 1s;
 }
 
 .portfolio {
@@ -446,16 +449,6 @@ button:hover span2:after {
     transition-delay: 1s;
     display: inline-block;
     vertical-align: middle;
-}
-
-.stow {
-    transition: all 1s;
-    height: var(--stowHeight);
-}
-
-.extend {
-    transition: all 1s;
-    height: var(--extendHeight);
 }
 
 @media(prefers-reduced-motion) {

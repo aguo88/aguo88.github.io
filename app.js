@@ -1,30 +1,33 @@
 var r = document.querySelector(':root');
 
 var websiteData = {
-    "SP1" : {
+    "SP1": {
         "learnMore": false,
         "hiddenHeight": 600,
         "showHeight": 1000,
-        "buttonString": "Learn More"
+        "buttonString": "Learn More",
+        "root": "--SP1"
     },
-    "SP2" : {
+    "SP2": {
         "learnMore": false,
         "hiddenHeight": 500,
         "showHeight": 1000,
-        "buttonString": "Learn More"
+        "buttonString": "Learn More",
+        "root": "--SP2"
     },
-    "SP3" : {
+    "SP3": {
         "learnMore": false,
         "hiddenHeight": 500,
         "showHeight": 1000,
-        "buttonString": "Learn More"
+        "buttonString": "Learn More",
+        "root": "--SP3"
     },
 }
 
 var buttonToID = {
-    "SP1Button" : "SP1",
-    "SP2Button" : "SP2",
-    "SP3Button" : "SP3"
+    "SP1Button": "SP1",
+    "SP2Button": "SP2",
+    "SP3Button": "SP3"
 }
 
 function handleButtonClick(buttonID) {
@@ -49,25 +52,13 @@ function getStringById(id) {
 function showContent(id) {
     // Switch to *Hide* button
     document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span2> Hide </span2>";
-    r.style.setProperty("--extendHeight", websiteData[id]["showHeight"]+"px");
-    if(document.getElementById(id).classList.contains("stow")) {
-        document.getElementById(id).classList.remove("stow");
-    }
-    if(!document.getElementById(id).classList.contains("extend")) {
-        document.getElementById(id).classList.add("extend");
-    }
+    r.style.setProperty(websiteData[id]["root"], websiteData[id]["showHeight"] + "px");
 }
 
 function hideContent(id) {
     //Switch to *Show* button
     document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span>" + getStringById(id) + "</span>";
-    r.style.setProperty("--stowHeight", websiteData[id]["hiddenHeight"]+"px");
-    if(document.getElementById(id).classList.contains("extend")) {
-        document.getElementById(id).classList.remove("extend");
-    }
-    if(!document.getElementById(id).classList.contains("stow")) {
-        document.getElementById(id).classList.add("stow");
-    }
+    r.style.setProperty(websiteData[id]["root"], websiteData[id]["hiddenHeight"] + "px");
 }
 
 
