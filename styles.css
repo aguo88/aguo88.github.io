@@ -11,8 +11,6 @@ html {
     --blue: #1461F0;
     --grey: #2B2B2B;
     --offwhite: #D9D9D9;
-    --arrow: '\21D3';
-    /* \00bb, /21D1 is Up */
 }
 
 /*
@@ -28,7 +26,6 @@ Global Conventions:
 
 body {
     font-family: 'Ek Mukta';
-    /* Helvetica */
     font-style: normal;
     font-weight: 400;
     background: var(--black);
@@ -40,6 +37,8 @@ body {
     margin: 0 auto;
     padding: 0 40;
 }
+
+/* Headers/Text */
 
 h1 {
     font-weight: 700;
@@ -70,6 +69,13 @@ h4 {
     color: var(--white);
 }
 
+p {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: var(--white);
+}
+
 .light {
     color: var(--white);
 }
@@ -78,12 +84,7 @@ h4 {
     color: var(--black);
 }
 
-p {
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: 400;
-    color: var(--white);
-}
+/* Buttons */
 
 button {
     background: var(--blue);
@@ -153,6 +154,15 @@ button:hover span2:after {
     margin-bottom: 50px;
 }
 
+.learnMoreButton {
+    position: relative;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navbar */
+
 .navbar {
     height: 60px;
     width: 100%;
@@ -183,6 +193,8 @@ button:hover span2:after {
     align-content: center;
 }
 
+/* Hyperlinks */
+
 .links {
     display: block;
     padding-left: 50px;
@@ -191,6 +203,8 @@ button:hover span2:after {
     font-size: 22px;
     line-height: 60px;
 }
+
+/* About Me */
 
 .aboutMe {
     padding-top: 100px;
@@ -230,6 +244,8 @@ button:hover span2:after {
     margin-right: auto;
     margin-left: auto;
 }
+
+/* Side Projects */
 
 .sp_first_container {
     padding-top: 30px;
@@ -272,7 +288,6 @@ button:hover span2:after {
     justify-content: center;
     align-content: center;
 }
-
 
 /* Left SP */
 .sideProjectTextL {
@@ -326,53 +341,21 @@ button:hover span2:after {
     position: relative;
 }
 
-.learnMoreButton {
-    position: relative;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.diffSwerveImage {
+.sideProjectImageRight {
     position: absolute;
     left: 50%;
     max-width: 533px;
     border-radius: 10px;
 }
 
-.frc610Image {
+.sideProjectImageLeft {
     position: absolute;
     right: 50%;
     max-width: 533px;
     border-radius: 10px;
 }
 
-.driveSimImage {
-    position: absolute;
-    left: 50%;
-    max-width: 533px;
-    border-radius: 10px;
-}
-
-.hiddenL {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-.hiddenR {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(100%);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
+/* Contact Me */
 
 .contactMe {
     padding-top: 30px;
@@ -391,53 +374,73 @@ button:hover span2:after {
     line-height: 60px;
 }
 
-.button2 {
+.iconButton {
     text-align: center;
     color: var(--white);
 }
 
-.button2:hover {
+.iconButton:hover {
     color: var(--blue);
 }
 
-.contactMeHide {
-    filter: blur(1);
-    opacity: 0.1;
+/* Animations */
+
+.hiddenR {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
     transition: all 1s;
-    transform: scale(0);
 }
 
-.contactMeShow {
+.hiddenL {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hideOpacity {
+    filter: blur(1);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.showOpacity{
     filter: blur(0);
     opacity: 1;
+    transition-delay: 1.5s;
     transform: scale(1);
 }
 
-.hiddenHeaders {
+.hiddenHeaderArrow {
     filter: blur(1);
     opacity: 0.1;
     transition: all 1s;
     transform: rotate(90deg);
 }
 
-.showHeader {
+.showHeaderArrow {
     filter: blur(0);
     opacity: 1;
     transform: rotate(0);
 }
 
 .hiddenHeaderText {
-    filter: blur(1);
-    opacity: 0.1;
+    opacity: 0;
     transition: all 1s;
-    transform: rotate(90deg);
 }
 
 .showHeaderText {
-    transition-delay: 1s;
-    filter: blur(0);
     opacity: 1;
-    transform: rotate(0);
+    transition-delay: 1s;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 @media(prefers-reduced-motion) {

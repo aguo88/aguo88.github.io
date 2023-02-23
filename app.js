@@ -1,4 +1,3 @@
-
 var learnMore1 = false;
 var learnMore2 = false;
 var learnMore3 = false;
@@ -51,7 +50,7 @@ function showTextButton(id) {
 const observerL = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
-        if(entry.isIntersecting) {
+        if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }
         //  else {
@@ -63,21 +62,35 @@ const observerL = new IntersectionObserver((entries) => {
 const observerR = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
-        if(entry.isIntersecting) {
+        if (entry.isIntersecting) {
             entry.target.classList.add('show');
-        } 
+        }
         // else {
         //     entry.target.classList.remove('show');
         // }
     });
 });
 
-const observerCM = new IntersectionObserver((entries) => {
+const observerOE = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
-        if(entry.isIntersecting) {
-            entry.target.classList.add('contactMeShow');
-        } 
+        if (entry.isIntersecting) {
+            entry.target.classList.add('showOpacity');
+        }
+        // else {
+        //     entry.target.classList.remove('contactMeShow');
+        // }
+    });
+});
+
+
+const observerHeaders = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.children[0].classList.add('showHeaderArrow');
+            entry.target.children[1].classList.add('showHeaderText');
+        }
         // else {
         //     entry.target.classList.remove('contactMeShow');
         // }
@@ -87,27 +100,10 @@ const observerCM = new IntersectionObserver((entries) => {
 
 const hiddenElementsL = document.querySelectorAll('.hiddenL');
 const hiddenElementsR = document.querySelectorAll('.hiddenR');
-const contactMeContent = document.querySelectorAll('.contactMeHide');
+const hideOpacityElements = document.querySelectorAll('.hideOpacity');
+const hiddenHeaders = document.querySelectorAll('.hiddenHeader');
+
 hiddenElementsL.forEach((el) => observerL.observe(el));
 hiddenElementsR.forEach((el) => observerR.observe(el));
-contactMeContent.forEach((el) => observerCM.observe(el));
-
-function showText() {
-
-}
-
-const observerHeaders = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry);
-        if(entry.isIntersecting) {
-            entry.target.classList.add('showHeader');
-            showText();
-        } 
-        // else {
-        //     entry.target.classList.remove('contactMeShow');
-        // }
-    });
-});
-
-const hiddenHeaders = document.querySelectorAll('.hiddenHeaders');
+hideOpacityElements.forEach((el) => observerOE.observe(el));
 hiddenHeaders.forEach((el) => observerHeaders.observe(el));

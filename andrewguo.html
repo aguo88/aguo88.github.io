@@ -35,11 +35,11 @@
   <a id="home"></a>
   <div class="container">
     <div class="aboutMe">
-      <div style="justify-self: center;">
-        <img src="Images/SideArrow.png">
-        <h3 style="display: inline-block;">About Me</h3>
+      <div style="justify-self: center;" class="hiddenHeader">
+        <img src="Images/SideArrow.png" style="vertical-align: middle" class="hiddenHeaderArrow">
+        <h3 style="display: inline-block;" style="vertical-align: middle" class="hiddenHeaderText">About Me</h3>
       </div>
-      <h1 class="hiddenL">Hi👋! My name is Andrew Guo and I’m a Mechatronics Engineer.</h1>
+      <h1>Hi👋! My name is Andrew Guo and I’m a <br><span class="auto-input" style="color:var(--blue)"></span></h1>
     </div>
 
     <!-- Headshot -->
@@ -48,7 +48,7 @@
     </div>
 
     <!-- About Me Blurb -->
-    <p class="aboutMeBlurb hiddenL">
+    <p class="aboutMeBlurb hideOpacity">
       I’m a candidate of Honors Mechatronics Engineering at the University of Waterloo. I am really interested in
       mechanical design, robotics and anything Mechatronics related! I enjoy playing sports such as hockey/working out.
       I also received my CSWP for mechanical design. Currently looking for Fall 2023 internships.
@@ -70,9 +70,9 @@
     <div class="container">
 
       <div class="portfolio">
-        <div style="justify-self: center;">
-          <img src="Images/SideArrow.png">
-          <div style="display: inline-block;">
+        <div style="justify-self: center;" class="hiddenHeader">
+          <img src="Images/SideArrow.png" style="vertical-align: middle" class="hiddenHeaderArrow">
+          <div style="display: inline-block;" style="vertical-align: middle" class="hiddenHeaderText">
             <h3 class="dark">Portfolio</h3>
           </div>
         </div>
@@ -80,7 +80,7 @@
 
       <!-- SP1: Diff Swerve -->
       <div class="sideProjectContent">
-        <img src="Images/DiffSwerve.jpg" class="diffSwerveImage">
+        <img src="Images/DiffSwerve.jpg" class="sideProjectImageRight">
         <div class="sideProjectTextL hiddenL">
           <h2 class="sideProjectTitleL">
             <div class="dark">
@@ -110,7 +110,7 @@
     <div class="container">
       <!-- SP2: FRC 610 -->
       <div class="sideProjectContent">
-        <img src="Images/FullRobotV2 (Feb 26) 1.jpg" class="frc610Image">
+        <img src="Images/FullRobotV2 (Feb 26) 1.jpg" class="sideProjectImageLeft">
         <div class="sideProjectTextR  hiddenR">
           <h2 class="sideProjectTitleR">
             <div class="light">
@@ -140,7 +140,7 @@
     <div class="container">
       <!-- SP3: 3D Driving Simulator -->
       <div class="sideProjectContent">
-        <img src="Images/DriveSimulator.svg" class="driveSimImage">
+        <img src="Images/DriveSimulator.svg" class="sideProjectImageRight">
         <div class="sideProjectTextL hiddenL">
           <h2 class="sideProjectTitleL">
             <div class="dark">
@@ -167,37 +167,42 @@
   </div>
 
   <a id="contactMe"></a>
-  <div class="contactMe contactMeHide">
-    <div class="container" style="display: grid; align-content: center; justify-content: center">
-      <div style="justify-self: center;">
-        <img src="Images/SideArrow.png">
-        <div style="display: inline-block;">
+  <div class="contactMe">
+    <div class="container" style="display: grid; align-content: center; justify-content: center;">
+      <div class="hiddenHeader" style="display: inline-block; align-self: center; justify-self: center;">
+        <img src="Images/SideArrow.png" style="vertical-align: middle" class="hiddenHeaderArrow">
+        <div style="display: inline-block;" style="vertical-align: middle" class="hiddenHeaderText">
           <h3 class="light">Contact Me</h3>
         </div>
       </div>
-      <div>
-        <p style="display: inline-block;">
-          The best way to contact me is by email:
+      <span class="hideOpacity" style="display: grid; align-content: center; justify-content: center">
+        <div>
+          <p style="display: inline-block;">
+            The best way to contact me is by email:
+          </p>
+          <a href="mailto: 10andrewguo@gmail.com" class="email">10andrewguo@gmail.com</a>
+        </div>
+        <p style="justify-self: center;">
+          Thanks for visiting my website🙏!
         </p>
-        <a href="mailto: 10andrewguo@gmail.com" class="email">10andrewguo@gmail.com</a>
-      </div>
-      <p style="justify-self: center;">
-        Thanks for visiting my website🙏!
-      </p>
-      <div style="font-size:45px; justify-self: center;"><a href="https://www.linkedin.com/in/andrew-guo-3a1235219/"
-          target="_blank"><i class="fa fa-linkedin-square button2"></i></a></div>
+        <div style="font-size:45px; justify-self: center;"><a href="https://www.linkedin.com/in/andrew-guo-3a1235219/"
+            target="_blank"><i class="fa fa-linkedin-square iconButton"></i></a></div>
+      </span>
     </div>
   </div>
 
-  <div class="container">
-    <div style="justify-self: center;">
-      <img src="Images/SideArrow.png" class="hiddenHeaders">
-      <div style="display: inline-block;">
-        <h3 class="light">Contact Me</h3>
-      </div>
-    </div>
-  </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed('.auto-input', {
+      // Waits 1000ms after typing "First"
+      strings: ['Mechatronics Engineer.', 'Mechanical Designer.', 'Robotics Enthusiast.'],
+      typeSpeed: 100,
+      startDelay: 700,
+      backSpeed: 100,
+      backDelay: 700,
+      loop: true
+    });
+  </script>
 </body>
 
 </html>
