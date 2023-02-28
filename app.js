@@ -6,7 +6,9 @@ var websiteData = {
         "hiddenHeight": 600,
         "showHeight": 1000,
         "buttonString": "Learn More",
-        "root": "--SP1"
+        "root": "--SP1",
+        "inj": "SP1INJ",
+        "injCode": "<div class=sideProjectContent><iframe width=560 height=315 src=https://www.youtube.com/embed/GDfDEVoNmEc></iframe></div>" 
     },
     "SP2": {
         "learnMore": false,
@@ -53,12 +55,14 @@ function showContent(id) {
     // Switch to *Hide* button
     document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span2> Hide </span2>";
     r.style.setProperty(websiteData[id]["root"], websiteData[id]["showHeight"] + "px");
+    document.getElementById(websiteData[id]["inj"]).innerHTML += websiteData[id]["injCode"];
 }
 
 function hideContent(id) {
     //Switch to *Show* button
     document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span>" + getStringById(id) + "</span>";
     r.style.setProperty(websiteData[id]["root"], websiteData[id]["hiddenHeight"] + "px");
+    document.getElementById(websiteData[id]["inj"]).children[2].remove();
 }
 
 
