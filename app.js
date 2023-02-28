@@ -7,22 +7,23 @@ var websiteData = {
         "showHeight": 1000,
         "buttonString": "Learn More",
         "root": "--SP1",
-        "inj": "SP1INJ",
-        "injCode": "<div class=sideProjectContent><iframe width=560 height=315 src=https://www.youtube.com/embed/GDfDEVoNmEc></iframe></div>" 
+        "learnMoreID": "SP1LM"
     },
     "SP2": {
         "learnMore": false,
         "hiddenHeight": 500,
         "showHeight": 1000,
         "buttonString": "Learn More",
-        "root": "--SP2"
+        "root": "--SP2",
+        "learnMoreID": "SP2LM"
     },
     "SP3": {
         "learnMore": false,
         "hiddenHeight": 500,
         "showHeight": 1000,
         "buttonString": "Learn More",
-        "root": "--SP3"
+        "root": "--SP3",
+        "learnMoreID": "SP3LM"
     },
 }
 
@@ -55,14 +56,25 @@ function showContent(id) {
     // Switch to *Hide* button
     document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span2> Hide </span2>";
     r.style.setProperty(websiteData[id]["root"], websiteData[id]["showHeight"] + "px");
-    document.getElementById(websiteData[id]["inj"]).innerHTML += websiteData[id]["injCode"];
+    setTimeout(function () {
+        document.getElementById(websiteData[id]["learnMoreID"]).style.display = "block";
+    }, 1000);
+    setTimeout(function () {
+        document.getElementById(websiteData[id]["learnMoreID"]).classList.remove("hideLearnMore");
+        document.getElementById(websiteData[id]["learnMoreID"]).classList.add("showLearnMore");
+    }, 1100);
 }
 
 function hideContent(id) {
     //Switch to *Show* button
     document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span>" + getStringById(id) + "</span>";
-    r.style.setProperty(websiteData[id]["root"], websiteData[id]["hiddenHeight"] + "px");
-    document.getElementById(websiteData[id]["inj"]).children[2].remove();
+    document.getElementById(websiteData[id]["learnMoreID"]).classList.remove("showLearnMore");
+    document.getElementById(websiteData[id]["learnMoreID"]).classList.add("hideLearnMore");
+    setTimeout(function () {
+        document.getElementById(websiteData[id]["learnMoreID"]).style.display = "none";
+        r.style.setProperty(websiteData[id]["root"], websiteData[id]["hiddenHeight"] + "px");
+    }, 1001);
+
 }
 
 

@@ -290,7 +290,7 @@ button:hover span2:after {
 
 .sideProjectContent {
     max-width: 1066px;
-    height: 500px;
+    max-height: 500px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -303,6 +303,7 @@ button:hover span2:after {
     display: flex;
     flex-direction: column;
     max-width: 533px;
+    width: 50%;
 }
 
 .sideProjectOverviewL {
@@ -329,6 +330,7 @@ button:hover span2:after {
     display: flex;
     flex-direction: column;
     max-width: 533px;
+    width: 50%;
 }
 
 .sideProjectOverviewR {
@@ -350,17 +352,21 @@ button:hover span2:after {
 }
 
 .sideProjectImageRight {
-    position: absolute;
+    /* position: absolute; */
     left: 50%;
     max-width: 533px;
+    width: 50%;
     border-radius: 10px;
+    display: inline-block;
 }
 
 .sideProjectImageLeft {
-    position: absolute;
+    /* position: absolute; */
     right: 50%;
     max-width: 533px;
+    width: 50%;
     border-radius: 10px;
+    display: inline-block;
 }
 
 /* Contact Me */
@@ -413,13 +419,26 @@ button:hover span2:after {
     transform: translateX(0);
 }
 
+
+.hideLearnMore {
+    opacity: 0;
+    /* filter: blur(5px); */
+    transition: all 1s;
+}
+
+.showLearnMore {
+    opacity: 1;
+    transition: all 1s;
+    /* filter: blur(0); */
+}
+
 .hideOpacity {
     filter: blur(1);
     opacity: 0;
     transition: all 1s;
 }
 
-.showOpacity{
+.showOpacity {
     filter: blur(0);
     opacity: 1;
     transition-delay: 1.5s;
@@ -467,4 +486,11 @@ button:hover span2:after {
     .hiddenHeader {
         transition: none;
     }
+}
+
+.video {
+    max-width: 533px;
+    max-height: 300px;
+    display: block;
+    width: 50%;
 }
