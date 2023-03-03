@@ -47,36 +47,46 @@ body {
 
 h1 {
     font-weight: 700;
-    font-size: clamp(30px, 4.16667vw, 60px); /* 60px */
-    line-height: clamp(30px, 4.16667vw, 60px); /* 60px */
+    font-size: clamp(40px, 4.16667vw, 60px);
+    /* 60px */
+    line-height: clamp(40px, 4.16667vw, 60px);
+    /* 60px */
     color: var(--white);
 }
 
 h2 {
-    font-size: clamp(20px, 2.77778vw, 40px); /* 40px */
-    line-height: clamp(30px, 4.16667vw, 60px); /* 60px */
+    font-size: clamp(26px, 2.77778vw, 40px);
+    /* 40px */
+    line-height: clamp(40px, 4.16667vw, 60px);
+    /* 60px */
     font-weight: 400px;
     color: var(--white);
 }
 
 h3 {
-    font-size: clamp(15px, 2.08333vw, 30px); /* 30px */
-    line-height: clamp(15px, 2.08333vw, 30px); /* 30px */
+    font-size: clamp(20px, 2.08333vw, 30px);
+    /* 30px */
+    line-height: clamp(20, 2.08333vw, 30px);
+    /* 30px */
     font-weight: 400px;
     color: var(--white);
 }
 
 h4 {
-    font-size: clamp(12.5px, 1.73611vw, 25px); /* 25px */
-    line-height: clamp(20px, 2.77778vw, 40px); /* 40px */
+    font-size: clamp(16px, 1.73611vw, 25px);
+    /* 25px */
+    line-height: clamp(26px, 2.77778vw, 40px);
+    /* 40px */
     font-weight: 400;
     letter-spacing: 0.15em;
     color: var(--white);
 }
 
 p {
-    font-size: clamp(10px, 1.38889vw, 20px); /* 20px */
-    line-height: clamp(12.5px, 1.73611vw, 25px); /* 25px */
+    font-size: clamp(12px, 1.38889vw, 20px);
+    /* 20px */
+    line-height: clamp(16px, 1.73611vw, 25px);
+    /* 25px */
     font-weight: 400;
     color: var(--white);
 }
@@ -96,8 +106,10 @@ button {
     border-radius: 40px;
     padding-left: 25px;
     padding-right: 25px;
-    font-size: clamp(11px, 1.52778vw, 22px); /* 22px */
-    line-height: clamp(30px, 4.16667vw, 60px); /* 60px */
+    font-size: clamp(15px, 1.52778vw, 22px);
+    /* 22px */
+    line-height: clamp(40px, 4.16667vw, 60px);
+    /* 60px */
     text-align: center;
     color: var(--white);
     border: none;
@@ -169,7 +181,8 @@ button:hover span2:after {
 /* Navbar */
 
 .navbar {
-    height: 60px;
+    height: clamp(40px, 4.16667vw, 60px);
+    ;
     width: 100%;
     position: fixed;
     background-color: var(--offwhite);
@@ -191,8 +204,10 @@ button:hover span2:after {
 
 .navbarname {
     color: var(--black);
-    font-size: 22px;
-    line-height: 60px;
+    font-size: clamp(15px, 1.52778vw, 22px);
+    /* 22px */
+    line-height: clamp(40px, 4.16667vw, 60px);
+    /* 60px */
     float: left;
     justify-content: center;
     align-content: center;
@@ -205,8 +220,10 @@ button:hover span2:after {
     padding-left: 50px;
     text-decoration: none;
     color: var(--black);
-    font-size: 22px;
-    line-height: 60px;
+    font-size: clamp(15px, 1.52778vw, 22px);
+    /* 22px */
+    line-height: clamp(40px, 4.16667vw, 60px);
+    /* 60px */
 }
 
 /* About Me */
@@ -221,7 +238,8 @@ button:hover span2:after {
 
 .headshotBackground {
     display: flex;
-    height: 500px;
+    max-height: 500px;
+    height: 33.4722vw;
     width: 60%;
     /* min-width: 500px; */
     margin-top: 30px;
@@ -235,7 +253,8 @@ button:hover span2:after {
 
 .headshotImage {
     border-radius: 50%;
-    z-index: -1;
+    /* z-index: -1; */
+    width: clamp(160px, 32.6389vw, 470px); /* 313.333px */
     margin-top: 0;
     margin-bottom: 0;
     border: 10px solid var(--white);
@@ -245,6 +264,7 @@ button:hover span2:after {
 .aboutMeBlurb {
     padding-top: 30px;
     text-align: center;
+    width: clamp(200px, 55.5555vw, 800px);
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
@@ -311,7 +331,7 @@ button:hover span2:after {
     position: relative;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--black);
+    /* color: var(--black); */
 }
 
 .sideProjectTitleL {
