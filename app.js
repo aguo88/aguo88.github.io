@@ -4,7 +4,7 @@ var websiteData = {
     "SP1": {
         "learnMore": false,
         "hiddenHeight": 600,
-        "showHeight": 1000,
+        "showHeight": 1400,
         "buttonString": "Learn More",
         "root": "--SP1",
         "learnMoreID": "SP1LM"

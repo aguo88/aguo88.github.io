@@ -91,6 +91,16 @@ p {
     color: var(--white);
 }
 
+ul {
+    font-size: clamp(12px, 1.38889vw, 20px);
+    /* 20px */
+    line-height: clamp(16px, 1.73611vw, 25px);
+    /* 25px */
+    font-weight: 400;
+    color: var(--white);
+    list-style-position: inside;
+}
+
 .light {
     color: var(--white);
 }
@@ -258,7 +268,7 @@ button:hover span2:after {
     margin-top: 0;
     margin-bottom: 0;
     border: 10px solid var(--white);
-    box-shadow: 50px 0px var(--grey);
+    box-shadow: clamp(30px, 3vw, 50px) 0px var(--grey);
 }
 
 .aboutMeBlurb {
@@ -404,8 +414,8 @@ button:hover span2:after {
     display: inline-block;
     text-decoration: none;
     color: var(--blue);
-    font-size: 20px;
-    line-height: 60px;
+    font-size: clamp(12px, 1.38889vw, 20px);
+    line-height: clamp(40px, 4.16667vw, 60px);
 }
 
 .iconButton {
