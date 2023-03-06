@@ -104,7 +104,7 @@
           <h4 class="sideProjectSubtitleL dark">
             Project Magnemite
           </h4>
-          <p class="sideProjectOverviewL dark" style="padding-right: 10px;">
+          <p class="sideProjectOverview dark">
             During a span of four weeks, a team comprised of three Mechatronics Engineering students and myself
             joined forces to create the world's first differential swerve drive powered by LEGO EV3.
             Click below to find out more.
@@ -119,14 +119,13 @@
 
       <!-- SP1: Learn More Content -->
       <div class="sideProjectContent hideLearnMore" id="SP1LM" style="display: none; padding-top: 50px;">
-        <!--opacity: 0;-->
         <div style="display: block;">
           <div class="video" style="display: inline-block; aspect-ratio: 1.78/1;">
-            <iframe title="TITLE" width="100%" height=100% frameborder="0"
-              src="https://www.youtube.com/embed/GDfDEVoNmEc" allowfullscreen></iframe>
+            <iframe title="LEGO EV3 Differential Swerve Demo" width="100%" height=100% frameborder="0"
+            src="https://www.youtube.com/embed/1jI6LHxefOI" allowfullscreen></iframe>
           </div>
-          <div class="sideProjectTextR" style="padding-left:10px; display: inline-block;">
-            <p class="sideProjectOverviewL dark">
+          <div class="sideProjectTextR" style="display: inline-block;">
+            <p class="sideProjectOverview dark">
               <span style="font-weight: 900;">
                 Small. Light. Compact.<br>
               </span>
@@ -146,11 +145,11 @@
         </div>
 
         <div style="display: block; padding-top: 50px;">
-          <div class="sideProjectTextL" style="padding-right:10px; display: inline-block;">
-            <p class="sideProjectOverviewL dark">
+          <div class="sideProjectTextL" style="display: inline-block;">
+            <p class="sideProjectOverview dark">
               Project Magnemite was designed in SOLIDWORKS, programmed in RobotC.
             </p>
-            <p class="sideProjectOverviewL dark">
+            <p class="sideProjectOverview dark">
               Click <a class="dark" target="_blank" href="/Resources/Project Magnemite Report.pdf">here</a> to see our
               full report.
             </p>
@@ -168,14 +167,14 @@
       <!-- SP2: FRC 610 -->
       <div class="sideProjectContent">
         <img src="Images/FRCRobot.jpg" class="sideProjectImageLeft">
-        <div class="sideProjectTextR  hiddenR">
+        <div class="sideProjectTextR hiddenR">
           <h2 class="sideProjectTitleR light">
             Team 610: FRC Team
           </h2>
           <h4 class="sideProjectSubtitleR light">
             Aeolus
           </h4>
-          <p class="sideProjectOverviewR light">
+          <p class="sideProjectOverview light">
             This unique robot architechure was the one of a kind featuring a pneuamtically powered linear puncher
             with variable power and angle (45 degrees). fully automated sequences from intaking to shooting
             and was an Ontario Provincial Championship Finalist, Excellence in Engineering Award and Quality Award
@@ -191,22 +190,39 @@
 
       <!-- SP2: Learn More Content -->
       <div class="sideProjectContent hideLearnMore" id="SP2LM" style="display: none; padding-top: 50px;">
-        <!--opacity: 0;-->
-        <div class="video" style="display: inline-block; aspect-ratio: 1.78/1;">
-          <iframe title="TITLE" width="100%" height=100% frameborder="0" src="https://www.youtube.com/embed/GDfDEVoNmEc"
-            allowfullscreen></iframe>
+        <div style="display: block;">
+          <div class="video" style="display: inline-block; aspect-ratio: 1.78/1;">
+            <iframe title="FRC 610 2022 Robot Reveal" width="100%" height=100% frameborder="0" src="https://www.youtube.com/embed/GDfDEVoNmEc"
+              allowfullscreen></iframe>
+          </div>
+          <div class="sideProjectTextL" style="display: inline-block;">
+            <p class="sideProjectOverview light">
+            Features:  
+            <ul class="light">
+              <li>Pneumatically powered linear punching mechanism capable of shooting 17+ ft with 45 deg of angle variation</li>
+              <li>Climber system capable of lifting entire robot (~100lbs)</li>
+              <li>Auto-Targeting with PID Tuning using Limelight Vision</li>
+              <li>Fully Automated Sequences from intaking to shooting using Optical Sensors, Proximity Sensors, Hall-Effect Sensors and Limit Switches</li>
+            </ul>
+            </p>
+          </div>
         </div>
-        <div class="sideProjectTextL" style="padding-right:10px; display: inline-block;">
-          <p class="sideProjectOverviewL light">
-          Features:  
-          <ul class="light">
-            <li>Linear Puncher capable of shooting 17+ ft with 45 deg of angle variation</li>
-            <li>Climber system capable of lifting entire robot (~100lbs)</li>
-            <li>Auto-Targeting with PID Tuning using Limelight Vision</li>
-            <li>Fully Automated Sequences from intaking to shooting using an array of sensors including: Optical Sensors, Proximity Sensors, Hall-Effect Sensors and Limit Switches</li>
-          </ul>
-          </p>
+
+        <div style="display: block; padding-top: 50px;">
+          <img src="Images/TeamPhoto.JPEG" class="sideProjectImageLeft">
+          <div class="sideProjectTextR" style=" display: inline-block;">
+            <p class="sideProjectOverview light">
+              Awards:
+              <ul class="light">
+                <li>Finalists at FRC Ontario Provincial Championship</li>
+                <li>Excellence in Engineering Award at University of Waterloo District Event</li>
+                <li>Event Winners at Humber College District Event</li>
+                <li>Quality Award at Humber College District Event</li>
+              </ul>
+            </p>
+          </div>
         </div>
+        
       </div>
     </div>
   </div>
@@ -227,9 +243,9 @@
               FRC DriveSim
             </div>
           </h4>
-          <p class="sideProjectOverviewL dark">
-            4 weeks, 4 mechatronics engineering students and 1 combined passion for building robots. Click below to
-            see what we made.
+          <p class="sideProjectOverview dark">
+            Using Unity 3D and C#, DriveSim is an first-person 3D simulator that enables FRC drivers to practice virtually.
+            Place yourself into the driver's shoes, stand behind the glass and experience FRC virtually. Supported on PS4 and Xbox One controllers.
           </p>
           <button class="learnMoreButton" id="SP3Button" onclick="handleButtonClick(id)">
             <span>
@@ -241,13 +257,12 @@
 
       <!-- SP3: Learn More Content -->
       <div class="sideProjectContent hideLearnMore" id="SP3LM" style="display: none; padding-top: 50px;">
-        <!--opacity: 0;-->
         <div class="video" style="display: inline-block; aspect-ratio: 1.78/1;">
-          <iframe title="TITLE" width="100%" height=100% frameborder="0" src="https://www.youtube.com/embed/GDfDEVoNmEc"
+          <iframe title="DriveSim Demo" width="100%" height=100% frameborder="0" src="https://www.youtube.com/embed/RfiBoQ26uEU"
             allowfullscreen></iframe>
         </div>
-        <div class="sideProjectTextR" style="padding-left:10px; display: inline-block;">
-          <p class="sideProjectOverviewR dark"> <!--style="color:var(--black);"-->
+        <div class="sideProjectTextR" style="display: inline-block;">
+          <p class="sideProjectOverview dark">
             Differential swerve drives, are a type of drivetrain used in robotics and other applications that
             require precise and agile movement. This type of drivetrain allows for individual control of the speed
             and direction of each wheel, allowing for advanced maneuverability and control.
@@ -286,7 +301,6 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     var typed = new Typed('.auto-input', {
-      // Waits 1000ms after typing "First"
       strings: ['Mechatronics Engineer.', 'Mechanical Designer.', 'Aspiring Robotics Engineer.'],
       typeSpeed: 100,
       startDelay: 700,

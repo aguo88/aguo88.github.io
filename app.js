@@ -12,7 +12,7 @@ var websiteData = {
     "SP2": {
         "learnMore": false,
         "hiddenHeight": 500,
-        "showHeight": 1000,
+        "showHeight": 1400,
         "buttonString": "Learn More",
         "root": "--SP2",
         "learnMoreID": "SP2LM"
@@ -53,7 +53,6 @@ function getStringById(id) {
 }
 
 function showContent(id) {
-    // Switch to *Hide* button
     document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span2> Hide </span2>";
     r.style.setProperty(websiteData[id]["root"], websiteData[id]["showHeight"] + "px");
     setTimeout(function () {
@@ -66,7 +65,6 @@ function showContent(id) {
 }
 
 function hideContent(id) {
-    //Switch to *Show* button
     document.getElementById(Object.keys(buttonToID).find(key => buttonToID[key] === id)).innerHTML = "<span>" + getStringById(id) + "</span>";
     document.getElementById(websiteData[id]["learnMoreID"]).classList.remove("showLearnMore");
     document.getElementById(websiteData[id]["learnMoreID"]).classList.add("hideLearnMore");
@@ -84,9 +82,6 @@ const observerL = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }
-        //  else {
-        //     entry.target.classList.remove('show');
-        // }
     });
 });
 
@@ -96,9 +91,6 @@ const observerR = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }
-        // else {
-        //     entry.target.classList.remove('show');
-        // }
     });
 });
 
@@ -108,9 +100,6 @@ const observerOE = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('showOpacity');
         }
-        // else {
-        //     entry.target.classList.remove('contactMeShow');
-        // }
     });
 });
 
@@ -122,9 +111,6 @@ const observerHeaders = new IntersectionObserver((entries) => {
             entry.target.children[0].classList.add('showHeaderArrow');
             entry.target.children[1].classList.add('showHeaderText');
         }
-        // else {
-        //     entry.target.classList.remove('contactMeShow');
-        // }
     });
 });
 

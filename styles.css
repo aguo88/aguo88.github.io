@@ -334,9 +334,10 @@ button:hover span2:after {
     flex-direction: column;
     max-width: 533px;
     width: 50%;
+    padding-right: 20px;
 }
 
-.sideProjectOverviewL {
+.sideProjectOverview {
     text-align: left;
     position: relative;
     overflow: hidden;
@@ -361,14 +362,7 @@ button:hover span2:after {
     flex-direction: column;
     max-width: 533px;
     width: 50%;
-}
-
-.sideProjectOverviewR {
-    text-align: right;
-    position: relative;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* color: var(--white); */
+    padding-left: 20px;
 }
 
 .sideProjectTitleR {
