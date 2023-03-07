@@ -12,7 +12,7 @@ var websiteData = {
     "SP2": {
         "learnMore": false,
         "hiddenHeight": 500,
-        "showHeight": 1400,
+        "showHeight": 1200,
         "buttonString": "Learn More",
         "root": "--SP2",
         "learnMoreID": "SP2LM"
@@ -20,7 +20,7 @@ var websiteData = {
     "SP3": {
         "learnMore": false,
         "hiddenHeight": 500,
-        "showHeight": 1000,
+        "showHeight": 800,
         "buttonString": "Learn More",
         "root": "--SP3",
         "learnMoreID": "SP3LM"
