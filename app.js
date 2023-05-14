@@ -3,7 +3,7 @@ var r = document.querySelector(':root');
 var websiteData = {
     "SP1": {
         "learnMore": false,
-        "hiddenHeight": 600,
+        "hiddenHeight": 500,
         "showHeight": 1400,
         "buttonString": "Learn More",
         "root": "--SP1",
@@ -12,7 +12,7 @@ var websiteData = {
     "SP2": {
         "learnMore": false,
         "hiddenHeight": 500,
-        "showHeight": 1200,
+        "showHeight": 1400,
         "buttonString": "Learn More",
         "root": "--SP2",
         "learnMoreID": "SP2LM"
@@ -20,24 +20,34 @@ var websiteData = {
     "SP3": {
         "learnMore": false,
         "hiddenHeight": 500,
-        "showHeight": 800,
+        "showHeight": 1200,
         "buttonString": "Learn More",
         "root": "--SP3",
         "learnMoreID": "SP3LM"
+    },
+    "SP4": {
+        "learnMore": false,
+        "hiddenHeight": 500,
+        "showHeight": 800,
+        "buttonString": "Learn More",
+        "root": "--SP4",
+        "learnMoreID": "SP4LM"
     },
 }
 
 var buttonToID = {
     "SP1Button": "SP1",
     "SP2Button": "SP2",
-    "SP3Button": "SP3"
+    "SP3Button": "SP3",
+    "SP4Button": "SP4"
 }
 
 function handleButtonClick(buttonID) {
     switch (buttonID) {
-        case "SP1Button":
+        // case "SP1Button":
         case "SP2Button":
         case "SP3Button":
+        case "SP4Button":
             var id = buttonToID[buttonID];
             websiteData[id]["learnMore"] = !websiteData[id]["learnMore"];
             if (websiteData[id]["learnMore"])
